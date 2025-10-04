@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Score Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background-image: url(img/love\ bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .result-box {
+            background-color: rgba(250, 243, 245, 0.8);
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        h1 {
+            color: #e92888;
+        }
+        .score {
+            font-size: 2.5em;
+            color: #e92888;
+            margin: 20px 0;
+        }
+        .names {
+            font-size: 2.2em;
+            color: #1a1919;
+        }
+        #try{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #e92888;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #try:hover {
+            background-color: #c81e6c;
+        }
+        @media (max-width: 600px) {
+            .result-box {
+                padding: 20px 10px;
+            }
+            .score {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>Love Results!</h1>
+        <div class="names" id="names"></div>
+        <div class="score" id="score"></div>
+        <button id="try" onclick="window.location.href='index.html'">Try Again</button>
+    </div>
+    <script>
+        // Get names from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const name1 = params.get('name1') || "You";
+        const name2 = params.get('name2') || "Your Partner";
+
+        // Generate random love score between 50 and 100
+        const score = Math.floor(Math.random() * 51) + 50;
+
+        // Display names and score
+        document.getElementById('names').textContent = `${name1} ❤️ ${name2}`;
+        document.getElementById('score').textContent = `Love Score: ${score}%`;
+    </script>
+</body>
+</html>
