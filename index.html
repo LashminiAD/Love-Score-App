@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE SCORE</title>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>LOVE SCORE</h1>
+            </center>
+        <form action="result.html" method="get">
+            <label for="name1">Enter Your Name:</label>
+            <input type="text" id="name1" name="name1" required>
+            <br><br>
+            <label for="name2">Enter Their Name:</label>
+            <input type="text" id="name2" name="name2" required>
+            <br><br>
+           <center> <button type="submit">Calculate Love Score</button> </center>
+        </form>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background-image: url(img/love\ bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #e92888;
+        }
+        div {
+            background-color: rgba(250, 243, 245, 0.8);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #e92888;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #9c0757;
+        }
+    </style>
+</body>
+</html>
